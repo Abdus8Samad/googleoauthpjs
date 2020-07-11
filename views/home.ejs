@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Auth</title>
+    </head>
+    <body>
+        <% if(error){ %>
+            <h1><%= error %></h1>
+        <% } %> 
+        <% if(success){ %>
+            <h1><%= success %></h1>
+        <% } %>
+        <% if(user){ %>
+            <h1><%= user.username %></h1>
+        <% } %>
+        <form action="/auth/logout" method="GET">
+            <button>LogOut</button>
+        </form>
+    </body>
+</html>
